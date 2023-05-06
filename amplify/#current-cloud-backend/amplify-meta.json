@@ -1,0 +1,70 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-luffysfightclubts-dev-124338-authRole",
+      "UnauthRoleArn": "arn:aws:iam::688617565853:role/amplify-luffysfightclubts-dev-124338-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::688617565853:role/amplify-luffysfightclubts-dev-124338-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-luffysfightclubts-dev-124338-deployment",
+      "UnauthRoleName": "amplify-luffysfightclubts-dev-124338-unauthRole",
+      "StackName": "amplify-luffysfightclubts-dev-124338",
+      "StackId": "arn:aws:cloudformation:us-west-2:688617565853:stack/amplify-luffysfightclubts-dev-124338/a5b6e400-dfb3-11ed-aca0-0ad56fb8b0ff",
+      "AmplifyAppId": "d1hwbp65aqvt6n"
+    }
+  },
+  "function": {
+    "fetchAlbumPhotosFuncion": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2023-04-20T20:14:09.816Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2023-04-20T20:14:13.357Z",
+      "distZipFilename": "fetchAlbumPhotosFuncion-32334172323043574868-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-luffysfightclubts-dev-124338-deployment",
+        "s3Key": "amplify-builds/fetchAlbumPhotosFuncion-32334172323043574868-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-luffysfightclubts-dev-124338-deployment/amplify-cfn-templates/function/fetchAlbumPhotosFuncion-cloudformation-template.json",
+        "logicalId": "functionfetchAlbumPhotosFuncion"
+      },
+      "lastPushTimeStamp": "2023-04-20T20:16:23.013Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::688617565853:role/luffysfightclubtsLambdaRole63f0e2ff-dev",
+        "Region": "us-west-2",
+        "Arn": "arn:aws:lambda:us-west-2:688617565853:function:fetchAlbumPhotosFuncion-dev",
+        "Name": "fetchAlbumPhotosFuncion-dev",
+        "LambdaExecutionRole": "luffysfightclubtsLambdaRole63f0e2ff-dev"
+      },
+      "lastPushDirHash": "pepmZTuTzfJmwjclj53K/X3rMik="
+    }
+  },
+  "api": {
+    "fetchAlbumPhotosApi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "fetchAlbumPhotosFuncion",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-luffysfightclubts-dev-124338-deployment/amplify-cfn-templates/api/fetchAlbumPhotosApi-cloudformation-template.json",
+        "logicalId": "apifetchAlbumPhotosApi"
+      },
+      "lastPushTimeStamp": "2023-04-20T20:16:23.013Z",
+      "output": {
+        "ApiName": "fetchAlbumPhotosApi",
+        "RootUrl": "https://zerraccfbd.execute-api.us-west-2.amazonaws.com/dev",
+        "ApiId": "zerraccfbd"
+      },
+      "lastPushDirHash": "5EqcgdnhP2q6H9ZjQQle/LEWusw="
+    }
+  }
+}
